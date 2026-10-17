@@ -1,0 +1,19 @@
+<!--
+  Added to C:\Program Files (x86)\ossec-agent\ossec.conf on the Windows endpoint,
+  inside the <syscheck> block, directly below <frequency>.
+  Applied with: Restart-Service WazuhSvc
+-->
+<syscheck>
+
+  <disabled>no</disabled>
+
+  <!-- Frequency that syscheck is executed default every 12 hours -->
+  <frequency>43200</frequency>
+
+  <!-- Lab addition: real-time monitoring of the sensitive folder -->
+  <directories realtime="yes" check_all="yes" report_changes="yes">C:\SensitiveFiles</directories>
+
+  <!-- Default files to be monitored. -->
+  <!-- ... (default Wazuh entries unchanged) ... -->
+
+</syscheck>

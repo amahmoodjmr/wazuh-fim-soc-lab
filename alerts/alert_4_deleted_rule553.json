@@ -1,0 +1,209 @@
+{
+  "_index": "wazuh-alerts-4.x-2026.10.16",
+  "_id": "3fzSQ6EBcKhHjg-X-489",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "syscheck": {
+      "mode": "realtime",
+      "path": "c:\\sensitivefiles\\confidential_report.txt",
+      "sha1_after": "f964566a8dae300ba15e51dd6e9d666b4b50044c",
+      "uname_after": "Administrators",
+      "mtime_after": "2026-10-16T08:27:12",
+      "attrs_after": [
+        "ARCHIVE"
+      ],
+      "size_after": "88",
+      "uid_after": "S-1-5-32-544",
+      "win_perm_after": [
+        {
+          "allowed": [
+            "DELETE",
+            "READ_CONTROL",
+            "WRITE_DAC",
+            "WRITE_OWNER",
+            "SYNCHRONIZE",
+            "READ_DATA",
+            "WRITE_DATA",
+            "APPEND_DATA",
+            "READ_EA",
+            "WRITE_EA",
+            "EXECUTE",
+            "READ_ATTRIBUTES",
+            "WRITE_ATTRIBUTES",
+            [
+              "DELETE",
+              "READ_CONTROL",
+              "WRITE_DAC",
+              "WRITE_OWNER",
+              "SYNCHRONIZE",
+              "READ_DATA",
+              "WRITE_DATA",
+              "APPEND_DATA",
+              "READ_EA",
+              "WRITE_EA",
+              "EXECUTE",
+              "READ_ATTRIBUTES",
+              "WRITE_ATTRIBUTES"
+            ],
+            [
+              "READ_CONTROL",
+              "SYNCHRONIZE",
+              "READ_DATA",
+              "READ_EA",
+              "EXECUTE",
+              "READ_ATTRIBUTES"
+            ],
+            [
+              "DELETE",
+              "READ_CONTROL",
+              "SYNCHRONIZE",
+              "READ_DATA",
+              "WRITE_DATA",
+              "APPEND_DATA",
+              "READ_EA",
+              "WRITE_EA",
+              "EXECUTE",
+              "READ_ATTRIBUTES",
+              "WRITE_ATTRIBUTES"
+            ]
+          ],
+          "name": "Administrators"
+        },
+        {
+          "allowed": [
+            "DELETE",
+            "READ_CONTROL",
+            "WRITE_DAC",
+            "WRITE_OWNER",
+            "SYNCHRONIZE",
+            "READ_DATA",
+            "WRITE_DATA",
+            "APPEND_DATA",
+            "READ_EA",
+            "WRITE_EA",
+            "EXECUTE",
+            "READ_ATTRIBUTES",
+            "WRITE_ATTRIBUTES"
+          ],
+          "name": "SYSTEM"
+        },
+        {
+          "allowed": [
+            "READ_CONTROL",
+            "SYNCHRONIZE",
+            "READ_DATA",
+            "READ_EA",
+            "EXECUTE",
+            "READ_ATTRIBUTES"
+          ],
+          "name": "Users"
+        },
+        {
+          "allowed": [
+            "DELETE",
+            "READ_CONTROL",
+            "SYNCHRONIZE",
+            "READ_DATA",
+            "WRITE_DATA",
+            "APPEND_DATA",
+            "READ_EA",
+            "WRITE_EA",
+            "EXECUTE",
+            "READ_ATTRIBUTES",
+            "WRITE_ATTRIBUTES"
+          ],
+          "name": "Authenticated Users"
+        }
+      ],
+      "event": "deleted",
+      "md5_after": "f27fb71cee2eaf3cdf2cbe8adb6b7edd",
+      "sha256_after": "378189c1375853cbfdf6da4f08b2646a7c6576894235da016369bbb7a9831884"
+    },
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "ip": "192.168.48.1",
+      "name": "win-endpoint-sadeeq",
+      "id": "003"
+    },
+    "manager": {
+      "name": "icdfa-server"
+    },
+    "rule": {
+      "mail": false,
+      "level": 7,
+      "pci_dss": [
+        "11.5"
+      ],
+      "hipaa": [
+        "164.312.c.1",
+        "164.312.c.2"
+      ],
+      "tsc": [
+        "PI1.4",
+        "PI1.5",
+        "CC6.1",
+        "CC6.8",
+        "CC7.2",
+        "CC7.3"
+      ],
+      "description": "File deleted.",
+      "groups": [
+        "ossec",
+        "syscheck",
+        "syscheck_entry_deleted",
+        "syscheck_file"
+      ],
+      "nist_800_53": [
+        "SI.7"
+      ],
+      "gdpr": [
+        "II_5.1.f"
+      ],
+      "firedtimes": 1,
+      "mitre": {
+        "technique": [
+          "File Deletion",
+          "Data Destruction"
+        ],
+        "id": [
+          "T1070.004",
+          "T1485"
+        ],
+        "tactic": [
+          "Defense Evasion",
+          "Impact"
+        ]
+      },
+      "id": "553",
+      "gpg13": [
+        "4.11"
+      ]
+    },
+    "location": "syscheck",
+    "decoder": {
+      "name": "syscheck_deleted"
+    },
+    "id": "1792139252.2219196",
+    "full_log": "File 'c:\\sensitivefiles\\confidential_report.txt' deleted\nMode: realtime\n",
+    "timestamp": "2026-10-16T08:27:32.229+0000"
+  },
+  "fields": {
+    "syscheck.mtime_after": [
+      "2026-10-16T08:27:12.000Z"
+    ],
+    "timestamp": [
+      "2026-10-16T08:27:32.229Z"
+    ]
+  },
+  "highlight": {
+    "syscheck.path": [
+      "@opensearch-dashboards-highlighted-field@c:\\sensitivefiles\\confidential_report.txt@/opensearch-dashboards-highlighted-field@"
+    ]
+  },
+  "sort": [
+    1792139252229
+  ]
+}

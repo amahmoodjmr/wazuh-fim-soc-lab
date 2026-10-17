@@ -1,0 +1,13 @@
+<!--
+  ILLUSTRATIVE ONLY. This rule was NOT deployed or tested in the lab.
+  Idea: raise a high-severity alert when many "integrity checksum changed" (rule 550)
+  alerts hit the same agent within a short window, a typical ransomware pattern.
+  If used, it would go in /var/ossec/etc/rules/local_rules.xml on the manager,
+  and the frequency/timeframe values must be tuned to avoid false positives.
+-->
+<group name="syscheck,ransomware,">
+  <rule id="100100" level="12" frequency="20" timeframe="30">
+    <if_matched_sid>550</if_matched_sid>
+    <description>Possible ransomware: many files modified in 30 seconds</description>
+  </rule>
+</group>

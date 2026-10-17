@@ -1,0 +1,222 @@
+{
+  "_index": "wazuh-alerts-4.x-2026.10.16",
+  "_id": "3PzSQ6EBcKhHjg-XtI82",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "syscheck": {
+      "size_before": "45",
+      "uname_after": "Administrators",
+      "mtime_after": "2026-10-16T08:27:12",
+      "size_after": "88",
+      "md5_before": "14f76d1151ac645dbff363dac571061a",
+      "diff": "---\n> Unauthorized modification during SOC test\n",
+      "win_perm_after": [
+        {
+          "allowed": [
+            "DELETE",
+            "READ_CONTROL",
+            "WRITE_DAC",
+            "WRITE_OWNER",
+            "SYNCHRONIZE",
+            "READ_DATA",
+            "WRITE_DATA",
+            "APPEND_DATA",
+            "READ_EA",
+            "WRITE_EA",
+            "EXECUTE",
+            "READ_ATTRIBUTES",
+            "WRITE_ATTRIBUTES",
+            [
+              "DELETE",
+              "READ_CONTROL",
+              "WRITE_DAC",
+              "WRITE_OWNER",
+              "SYNCHRONIZE",
+              "READ_DATA",
+              "WRITE_DATA",
+              "APPEND_DATA",
+              "READ_EA",
+              "WRITE_EA",
+              "EXECUTE",
+              "READ_ATTRIBUTES",
+              "WRITE_ATTRIBUTES"
+            ],
+            [
+              "READ_CONTROL",
+              "SYNCHRONIZE",
+              "READ_DATA",
+              "READ_EA",
+              "EXECUTE",
+              "READ_ATTRIBUTES"
+            ],
+            [
+              "DELETE",
+              "READ_CONTROL",
+              "SYNCHRONIZE",
+              "READ_DATA",
+              "WRITE_DATA",
+              "APPEND_DATA",
+              "READ_EA",
+              "WRITE_EA",
+              "EXECUTE",
+              "READ_ATTRIBUTES",
+              "WRITE_ATTRIBUTES"
+            ]
+          ],
+          "name": "Administrators"
+        },
+        {
+          "allowed": [
+            "DELETE",
+            "READ_CONTROL",
+            "WRITE_DAC",
+            "WRITE_OWNER",
+            "SYNCHRONIZE",
+            "READ_DATA",
+            "WRITE_DATA",
+            "APPEND_DATA",
+            "READ_EA",
+            "WRITE_EA",
+            "EXECUTE",
+            "READ_ATTRIBUTES",
+            "WRITE_ATTRIBUTES"
+          ],
+          "name": "SYSTEM"
+        },
+        {
+          "allowed": [
+            "READ_CONTROL",
+            "SYNCHRONIZE",
+            "READ_DATA",
+            "READ_EA",
+            "EXECUTE",
+            "READ_ATTRIBUTES"
+          ],
+          "name": "Users"
+        },
+        {
+          "allowed": [
+            "DELETE",
+            "READ_CONTROL",
+            "SYNCHRONIZE",
+            "READ_DATA",
+            "WRITE_DATA",
+            "APPEND_DATA",
+            "READ_EA",
+            "WRITE_EA",
+            "EXECUTE",
+            "READ_ATTRIBUTES",
+            "WRITE_ATTRIBUTES"
+          ],
+          "name": "Authenticated Users"
+        }
+      ],
+      "sha256_before": "39c336d735a7d76dc272d017e7542be410b294345927fc6c821c9a4e2b5cb280",
+      "mtime_before": "2026-10-16T08:27:00",
+      "mode": "realtime",
+      "path": "c:\\sensitivefiles\\confidential_report.txt",
+      "sha1_after": "f964566a8dae300ba15e51dd6e9d666b4b50044c",
+      "changed_attributes": [
+        "size",
+        "mtime",
+        "md5",
+        "sha1",
+        "sha256"
+      ],
+      "attrs_after": [
+        "ARCHIVE"
+      ],
+      "uid_after": "S-1-5-32-544",
+      "event": "modified",
+      "md5_after": "f27fb71cee2eaf3cdf2cbe8adb6b7edd",
+      "sha1_before": "78f7d7483004f738ca0c1bc94d22d0060e886169",
+      "sha256_after": "378189c1375853cbfdf6da4f08b2646a7c6576894235da016369bbb7a9831884"
+    },
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "ip": "192.168.48.1",
+      "name": "win-endpoint-sadeeq",
+      "id": "003"
+    },
+    "manager": {
+      "name": "icdfa-server"
+    },
+    "rule": {
+      "mail": false,
+      "level": 7,
+      "pci_dss": [
+        "11.5"
+      ],
+      "hipaa": [
+        "164.312.c.1",
+        "164.312.c.2"
+      ],
+      "tsc": [
+        "PI1.4",
+        "PI1.5",
+        "CC6.1",
+        "CC6.8",
+        "CC7.2",
+        "CC7.3"
+      ],
+      "description": "Integrity checksum changed.",
+      "groups": [
+        "ossec",
+        "syscheck",
+        "syscheck_entry_modified",
+        "syscheck_file"
+      ],
+      "nist_800_53": [
+        "SI.7"
+      ],
+      "gdpr": [
+        "II_5.1.f"
+      ],
+      "firedtimes": 2,
+      "mitre": {
+        "technique": [
+          "Stored Data Manipulation"
+        ],
+        "id": [
+          "T1565.001"
+        ],
+        "tactic": [
+          "Impact"
+        ]
+      },
+      "id": "550",
+      "gpg13": [
+        "4.11"
+      ]
+    },
+    "location": "syscheck",
+    "decoder": {
+      "name": "syscheck_integrity_changed"
+    },
+    "id": "1792139233.2217280",
+    "full_log": "File 'c:\\sensitivefiles\\confidential_report.txt' modified\nMode: realtime\nChanged attributes: size,mtime,md5,sha1,sha256\nSize changed from '45' to '88'\nOld modification time was: '1792139220', now it is '1792139232'\nOld md5sum was: '14f76d1151ac645dbff363dac571061a'\nNew md5sum is : 'f27fb71cee2eaf3cdf2cbe8adb6b7edd'\nOld sha1sum was: '78f7d7483004f738ca0c1bc94d22d0060e886169'\nNew sha1sum is : 'f964566a8dae300ba15e51dd6e9d666b4b50044c'\nOld sha256sum was: '39c336d735a7d76dc272d017e7542be410b294345927fc6c821c9a4e2b5cb280'\nNew sha256sum is : '378189c1375853cbfdf6da4f08b2646a7c6576894235da016369bbb7a9831884'\n",
+    "timestamp": "2026-10-16T08:27:13.281+0000"
+  },
+  "fields": {
+    "syscheck.mtime_after": [
+      "2026-10-16T08:27:12.000Z"
+    ],
+    "syscheck.mtime_before": [
+      "2026-10-16T08:27:00.000Z"
+    ],
+    "timestamp": [
+      "2026-10-16T08:27:13.281Z"
+    ]
+  },
+  "highlight": {
+    "syscheck.path": [
+      "@opensearch-dashboards-highlighted-field@c:\\sensitivefiles\\confidential_report.txt@/opensearch-dashboards-highlighted-field@"
+    ]
+  },
+  "sort": [
+    1792139233281
+  ]
+}
